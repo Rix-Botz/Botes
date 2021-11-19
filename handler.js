@@ -26,13 +26,13 @@ module.exports = {
         let user = global.db.data.users[m.sender]
         if (typeof user !== 'object') global.db.data.users[m.sender] = {}
         if (user) {
-            if (!isNumber(user.healt)) user.healt = 0
+            if (!isNumber(user.healt)) user.healt = 100
             if (!isNumber(user.level)) user.level = 0
             if (!isNumber(user.exp)) user.exp = 0
             if (!isNumber(user.title)) user.title = ''
             if (!isNumber(user.limit)) user.limit = 10
             if (!isNumber(user.lastclaim)) user.lastclaim = 0
-            if (!isNumber(user.money)) user.money = 0
+            if (!isNumber(user.money)) user.money = 10000
             
             if (!isNumber(user.diamond)) user.diamond = 0
             if (!isNumber(user.iron)) user.iron = 0
@@ -43,7 +43,7 @@ module.exports = {
             if (!isNumber(user.legendary)) user.legendary = 0
             if (!isNumber(user.pet)) user.pet = 0
         
-            if (!isNumber(user.potion)) user.potion = 0
+            if (!isNumber(user.potion)) user.potion = 1
             if (!isNumber(user.sampah)) user.sampah = 0
             if (!isNumber(user.armor)) user.armor = 0
             
@@ -117,7 +117,7 @@ module.exports = {
             exp: 0,
             limit: 10,
             lastclaim: 0,
-            money: 0,
+            money: 1000,
             diamond: 0,
             iron: 0,
             common: 0,
@@ -125,7 +125,7 @@ module.exports = {
             mythic: 0,
             legendary: 0,
             pet: 0,
-            potion: 0,
+            potion: 1,
             sampah: 0,
             armor: 0,
             kucing: 0,
